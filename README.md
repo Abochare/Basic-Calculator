@@ -10,6 +10,4 @@ It supports memory functions, square root, percentage, history tracking, keypres
 │── 📄 README.md           # Project documentation
 
 📸 Preview
-
-
-![Uploading calculator.png…]()
+![calculator](https://github.com/user-attachments/assets/919fd20f-4d2b-4c95-9a7b-d970563eedca)
