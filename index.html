@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title"> <span>B</span>asic  <span>C</span>alculator</h1>
+        <div class="calculator">
+            <input type="text" id="display" class="display" value="0" disabled>
+            
+
+            <div class="buttons">
+                <!-- Memory Functions -->
+                <button class="button memory" onclick="memoryClear()">MC</button>
+                <button class="button memory" onclick="memoryRecall()">MR</button>
+                <button class="button memory" onclick="memoryAdd()">M+</button>
+
+                <button class="button memory" onclick="memorySubtract()">M-</button>
+                <button class="button clear" onclick="clearDisplay()">C</button>
+                <button class="button" onclick="deleteLast()">⌫</button>
+
+                <button class="button operator" onclick="calculateSquareRoot()">√</button>
+                <button class="button operator" onclick="appendOperation('%')">%</button>
+                <button class="button operator" onclick="appendOperation('/')">/</button>
+
+                <button class="button operator" onclick="appendOperation('*')">*</button>
+                <button class="button operator" onclick="appendOperation('-')">-</button>
+                <button class="button operator" onclick="appendOperation('+')">+</button>
+
+                <button class="button" onclick="appendNumber('7')">7</button>
+                <button class="button" onclick="appendNumber('8')">8</button>
+                <button class="button" onclick="appendNumber('9')">9</button>
+
+                <button class="button" onclick="appendNumber('4')">4</button>
+                <button class="button" onclick="appendNumber('5')">5</button>
+                <button class="button" onclick="appendNumber('6')">6</button>
+
+                <button class="button" onclick="appendNumber('1')">1</button>
+                <button class="button" onclick="appendNumber('2')">2</button>
+                <button class="button" onclick="appendNumber('3')">3</button>
+
+                <button class="button" onclick="toggleSign()">+/-</button>
+                <button class="button" onclick="appendNumber('0')">0</button>
+                <button class="button equal" onclick="calculate()">=</button>
+                <button class="button history" onclick="showHistory()">H</button>
+                 
+            </div>
+            
+        </div>
+    </div>
+    <!-- History Modal -->
+    <div id="historyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeHistory()">&times;</span>
+            <h2>Calculation History</h2>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
